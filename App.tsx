@@ -1,29 +1,13 @@
-/**
- * Simple React Native App
- */
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React from 'react'
+import { NavigationContainer } from '@react-navigation/native'
+import BottomTabNavigator from './src/navigation/BottomTabNavigator'
 
-function App() {
+const App: React.FC = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Hello World!</Text>
-    </View>
-  );
+    <NavigationContainer>
+      <BottomTabNavigator />
+    </NavigationContainer>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#f0f0f0',
-  },
-  text: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#333',
-  },
-});
-
-export default App;
+export default App
