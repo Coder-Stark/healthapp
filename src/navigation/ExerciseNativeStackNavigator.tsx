@@ -9,12 +9,19 @@ import CardioScreen from "../screens/exercise/categories/cardioCategory/CardioSc
 import GymScreen from "../screens/exercise/categories/gymCategory/GymScreen";
 import YogaScreen from "../screens/exercise/categories/yogaCategory/YogaScreen";
 
+import WorkoutDetailsScreen from '../screens/exercise/workouts/WorkoutDetailsScreen';
+import ExerciseDetailsScreen from '../screens/exercise/exerciseDetails/ExerciseDetailsScreen';
+
 export type ExerciseStackParamList = {
     ExerciseMain: undefined;
+
     BodyWeight: undefined;
     Cardio: undefined;
     Gym: undefined;
     Yoga: undefined;
+
+    WorkoutDetails: {workout: any};
+    ExerciseDetails: {exercise: any};
 }
 
 const Stack = createNativeStackNavigator<ExerciseStackParamList>();
@@ -23,10 +30,14 @@ const ExerciseNativeStackNavigator = () => {
   return (
     <Stack.Navigator initialRouteName='ExerciseMain'>
         <Stack.Screen name="ExerciseMain" component={ExerciseScreen} options={{title: 'Exercises'}}/>
+
         <Stack.Screen name="BodyWeight" component={BodyWeightScreen}/>
         <Stack.Screen name="Cardio" component={CardioScreen}/>
         <Stack.Screen name="Gym" component={GymScreen}/>
         <Stack.Screen name="Yoga" component={YogaScreen}/>
+
+        <Stack.Screen name="WorkoutDetails" component={WorkoutDetailsScreen}/>
+        <Stack.Screen name="ExerciseDetails" component={ExerciseDetailsScreen}/>
     </Stack.Navigator>
 
   )

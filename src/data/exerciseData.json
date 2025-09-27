@@ -1,0 +1,100 @@
+{
+  "bodyweight": {
+    "categoryName": "BODYWEIGHT EXERCISES",
+    "categoryDescription": "No equipment needed",
+    "categoryImage": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400",
+    "workouts": [
+      {
+        "id": "fullbody",
+        "name": "Full Body Circuit",
+        "description": "Complete workout for all muscle groups",
+        "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=400",
+        "duration": "20 mins",
+        "exercises": [
+          {
+            "id": "jumpingjacks",
+            "name": "JUMPING JACKS",
+            "image": "https://sworkit.com/wp-content/uploads/2020/06/sworkit-jumping-jack.gif",
+            "sets": 12,
+            "duration": "30 sec",
+            "instructions": "Stand upright with legs together and arms at your sides. Jump up and spread your feet apart while raising your arms overhead."
+          },
+          {
+            "id": "pushups",
+            "name": "PUSH-UPS",
+            "image": "https://i.pinimg.com/originals/ff/cf/40/ffcf40d4ddba50723cd4244ca3aa5867.gif",
+            "sets": 10,
+            "duration": "45 sec",
+            "instructions": "Start in plank position. Lower your body until chest nearly touches floor, then push back up."
+          },
+          {
+            "id": "squats",
+            "name": "SQUATS",
+            "image": "https://hips.hearstapps.com/hmg-prod/images/workouts/2016/03/bodyweightsquat-1457045230.gif",
+            "sets": 15,
+            "duration": "45 sec",
+            "instructions": "Stand with feet shoulder-width apart. Lower down as if sitting in a chair, then return to standing."
+          },
+          {
+            "id": "plank",
+            "name": "PLANK",
+            "image": "https://media.self.com/photos/57e0275146f5dc120d68261d/master/w_1600%2Cc_limit/PLANK.gif",
+            "sets": 1,
+            "duration": "60 sec",
+            "instructions": "Hold your body in a straight line from head to heels, supporting yourself on forearms and toes."
+          }
+        ]
+      },
+      {
+        "id": "upperbody",
+        "name": "Upper Body Strength",
+        "description": "Focus on arms, chest, and shoulders",
+        "image": "https://images.unsplash.com/photo-1434682881908-b43d0467b798?w=400",
+        "duration": "15 mins",
+        "exercises": [
+          {
+            "id": "inclinepushups",
+            "name": "INCLINE PUSH-UPS",
+            "image": "https://177d01fbswx3jjl1t20gdr8j-wpengine.netdna-ssl.com/wp-content/uploads/2019/06/Incline-Push-Up.gif",
+            "sets": 12,
+            "duration": "40 sec",
+            "instructions": "Place hands on elevated surface. Perform push-up motion with body at an incline."
+          },
+          {
+            "id": "tricepdips",
+            "name": "TRICEP DIPS",
+            "image": "https://www.spotebi.com/wp-content/uploads/2015/08/triceps-dips.gif",
+            "sets": 10,
+            "duration": "30 sec",
+            "instructions": "Sit on edge of chair, hands gripping edge. Lower body by bending elbows, then push back up."
+          }
+        ]
+      },
+      {
+        "id": "lowerbody",
+        "name": "Lower Body Power",
+        "description": "Strengthen legs and glutes",
+        "image": "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=400",
+        "duration": "18 mins",
+        "exercises": [
+          {
+            "id": "lunges",
+            "name": "LUNGES",
+            "image": "https://i.gifer.com/7ZnF.gif",
+            "sets": 12,
+            "duration": "45 sec",
+            "instructions": "Step forward with one leg, lowering hips until both knees are bent at 90 degrees."
+          },
+          {
+            "id": "glutebridges",
+            "name": "GLUTE BRIDGES",
+            "image": "https://hips.hearstapps.com/hmg-prod/images/workouts/2016/03/glutebridge-1457045229.gif",
+            "sets": 15,
+            "duration": "40 sec",
+            "instructions": "Lie on back with knees bent. Lift hips up by squeezing glutes, then lower down."
+          }
+        ]
+      }
+    ]
+  }
+}
