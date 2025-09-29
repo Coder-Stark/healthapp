@@ -4,6 +4,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { ExerciseStackParamList } from '../../../../navigation/ExerciseNativeStackNavigator'
 import { useNavigation } from '@react-navigation/native';
 import exerciseData from '../../../../data/exerciseData.json';
+import {exerciseMediaMapping} from '../../../../assets/exerciseMedia/exerciseMediaMapping';
 
 type BodyWeightNavProp = NativeStackNavigationProp<ExerciseStackParamList>;
 
@@ -15,7 +16,7 @@ const BodyWeightScreen: React.FC = () => {
     <TouchableOpacity style={styles.workoutCard} 
       onPress={()=> navigation.navigate('WorkoutDetails', {workout: item})}
     >
-    <Image source={{uri: item.image}} style={styles.workoutImage} />
+    <Image source={exerciseMediaMapping[item.image]} style={styles.workoutImage} />
     <View style={styles.workoutInfo}>
       <Text style={styles.workoutName}>{item.name}</Text>
       <View style={styles.workoutMeta}>

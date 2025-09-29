@@ -1,7 +1,9 @@
-import { View, Text, Image, StyleSheet, ScrollView } from 'react-native'
+import { View, Text, StyleSheet, ScrollView } from 'react-native'
 import React from 'react'
 import { RouteProp, useRoute } from '@react-navigation/native'
 import { ExerciseStackParamList } from '../../../navigation/ExerciseNativeStackNavigator'
+import Video from 'react-native-video';
+import { exerciseMediaMapping } from '../../../assets/exerciseMedia/exerciseMediaMapping';
 
 type ExerciseDetailsRouteProp = RouteProp<ExerciseStackParamList, 'ExerciseDetails'>;
 
@@ -15,9 +17,15 @@ const ExerciseDetailsScreen: React.FC = () => {
         <Text style={styles.title}>{exercise.name}</Text>
       </View>
 
-      <Image source={{uri: exercise.image}} style={styles.exerciseGif} />
-
-      <View style={styles.container}>
+      <View style={styles.videoContainer}>
+        <Video
+          source={exerciseMediaMapping[exercise.video]} 
+          style={styles.exerciseVideo}
+          resizeMode="cover"
+          repeat
+        />
+      </View>
+      <View style={styles.contentContainer}>
         <View style = {styles.metaRow}>
           <View style={styles.metaItem}>
             <Text style={styles.metaLabel}>Sets:</Text>
@@ -51,14 +59,25 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
+    color: '#333',
   },
-  exerciseGif: {
-    width: '100%',
-    height: 300,
-    marginBottom: 20,
+  videoContainer: {
+    width: '92%',
+    height: 300, 
+    backgroundColor: 'black',
+    borderRadius: 12, 
+    marginHorizontal: 16, 
+    marginBottom: 20, 
+    overflow: 'hidden',
+    alignSelf: 'center',
   },
-  detailsContainer: {
-    padding: 20,
+  exerciseVideo: {
+  width: '100%',
+  height: '100%',
+  backgroundColor: 'black',
+  },
+  contentContainer: {
+    paddingHorizontal: 16,
   },
   metaRow: {
     flexDirection: 'row',
@@ -72,6 +91,10 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     minWidth: 120,
     elevation: 2,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
   },
   metaLabel: {
     fontSize: 14,
@@ -88,11 +111,17 @@ const styles = StyleSheet.create({
     padding: 20,
     borderRadius: 12,
     elevation: 2,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    marginBottom: 20,
   },
   instructionsTitle: {
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 12,
+    color: '#333',
   },
   instructions: {
     fontSize: 16,

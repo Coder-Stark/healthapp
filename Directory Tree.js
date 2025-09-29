@@ -7,6 +7,45 @@ healthapp
  ┣  android
  ┣  ios
  ┣  node_modules
+src
+ ┣ assets
+ ┃ ┣ dietsMedia
+ ┃ ┣ exerciseMedia
+ ┃ ┃ ┣ exerciseImages
+ ┃ ┃ ┃ ┣ bodyweightImages
+ ┃ ┃ ┃ ┣ cardioImages
+ ┃ ┃ ┃ ┣ gymImages
+ ┃ ┃ ┃ ┣ yogaImages
+ ┃ ┃ ┃ ┗ demoImage.jpg
+ ┃ ┃ ┣ exerciseVideos
+ ┃ ┃ ┃ ┗ demoVideo.mp4
+ ┃ ┃ ┗ exerciseMediaMapping.ts
+ ┃ ┗ profileMedia
+ ┣ data
+ ┃ ┗ exerciseData.json
+ ┣ navigation
+ ┃ ┣ BottomTabNavigator.tsx
+ ┃ ┗ ExerciseNativeStackNavigator.tsx
+ ┗ screens
+ ┃ ┣ diets
+ ┃ ┃ ┗ DietsScreen.tsx
+ ┃ ┣ exercise
+ ┃ ┃ ┣ categories
+ ┃ ┃ ┃ ┣ bodyWeightCategory
+ ┃ ┃ ┃ ┃ ┗ BodyWeightScreen.tsx
+ ┃ ┃ ┃ ┣ cardioCategory
+ ┃ ┃ ┃ ┃ ┗ CardioScreen.tsx
+ ┃ ┃ ┃ ┣ gymCategory
+ ┃ ┃ ┃ ┃ ┗ GymScreen.tsx
+ ┃ ┃ ┃ ┗ yogaCategory
+ ┃ ┃ ┃ ┃ ┗ YogaScreen.tsx
+ ┃ ┃ ┣ exerciseDetails
+ ┃ ┃ ┃ ┗ ExerciseDetailsScreen.tsx
+ ┃ ┃ ┣ workouts
+ ┃ ┃ ┃ ┗ WorkoutDetailsScreen.tsx
+ ┃ ┃ ┗ ExerciseScreen.tsx
+ ┃ ┗ profile
+ ┃ ┃ ┗ ProfileScreen.tsx
  ┣ .eslintrc.js
  ┣ .gitignore
  ┣ .prettierrc.js

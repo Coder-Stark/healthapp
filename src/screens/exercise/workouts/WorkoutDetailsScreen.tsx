@@ -1,8 +1,10 @@
-import { View, Text, TouchableOpacity, Image , FlatList, StyleSheet} from 'react-native'
+import { View, Text, TouchableOpacity, FlatList, StyleSheet} from 'react-native'
 import React from 'react'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { ExerciseStackParamList } from '../../../navigation/ExerciseNativeStackNavigator'
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
+import Video from 'react-native-video';
+import { exerciseMediaMapping } from '../../../assets/exerciseMedia/exerciseMediaMapping';
 
 type WorkoutDetailsNavProp = NativeStackNavigationProp<ExerciseStackParamList>;
 type WorkoutDetailsRouteProp = RouteProp<ExerciseStackParamList, 'WorkoutDetails'>;
@@ -16,8 +18,18 @@ const WorkoutDetailsScreen: React.FC = () => {
   const renderExercise = ({item}: any)=>(
     <TouchableOpacity style={styles.exerciseCard}
       onPress={()=> navigation.navigate('ExerciseDetails', {exercise: item})}
+      activeOpacity={0.8}
     >
-      <Image source={{uri: item.image}} style={styles.exerciseImage} />
+      <View style={styles.videoContainer} pointerEvents='none'>
+        <Video
+          source={exerciseMediaMapping[item.video]}
+          style={styles.exerciseVideo}
+          resizeMode="cover"
+          repeat
+          paused={true}
+          />
+      </View>
+
       <View style={styles.exerciseInfo}>
         <Text style={styles.exerciseName}>{item.name}</Text>
         <View style={styles.exerciseMeta}>
@@ -33,7 +45,7 @@ const WorkoutDetailsScreen: React.FC = () => {
       <View style={styles.workoutHeader}>
         <Text style={styles.title}>{workout.name}</Text>
         <Text style={styles.description}>{workout.description}</Text>
-        <Text style={styles.duration}>Duration: {workout.duration}</Text>
+        <Text style={styles.headerDuration}>Duration: {workout.duration}</Text>
       </View>
     
       <FlatList 
@@ -41,6 +53,8 @@ const WorkoutDetailsScreen: React.FC = () => {
         renderItem={renderExercise}  
         keyExtractor={(item) => item.id} 
         showsVerticalScrollIndicator={false}
+        contentContainerStyle={styles.listContainer}
+        removeClippedSubviews={true}
       />
     </View>
   );
@@ -60,6 +74,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 8,
+    color: '#333'
   },
   description: {
     fontSize: 16,
@@ -67,15 +82,18 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 4,
   },
-  duration: {
+  headerDuration: {
     fontSize: 14,
     color: '#007AFF',
     fontWeight: '600',
   },
+  listContainer: {
+    paddingBottom: 20,
+  },
   exerciseCard: {
     backgroundColor: 'white',
     borderRadius: 12,
-    marginBottom: 12,
+    marginBottom: 16,
     overflow: 'hidden',
     elevation: 3,
     shadowColor: '#000',
@@ -83,17 +101,14 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 4,
   },
-  exerciseImage: {
-    width: '100%',
-    height: 180,
-  },
   exerciseInfo: {
-    padding: 12,
+    padding: 16,
   },
   exerciseName: {
     fontSize: 16,
     fontWeight: 'bold',
-    marginBottom: 6,
+    marginBottom: 8,
+    color: '#333',
   },
   exerciseMeta: {
     flexDirection: 'row',
@@ -103,6 +118,25 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#007AFF',
     fontWeight: '600',
+  },
+  duration: {
+    fontSize: 12,
+    color: '#007AFF',
+    fontWeight: '600',
+  },
+  videoContainer: {
+    width: '100%',
+    height: 200,
+    backgroundColor: 'black',
+    borderTopLeftRadius: 12,
+    borderTopRightRadius: 12,
+    overflow: 'hidden', // Ensures video respects border radius
+    position: 'relative', // For any overlay positioning if needed
+  },
+  exerciseVideo: {
+  width: '100%',
+  height: '100%',
+  backgroundColor: 'black', // fallback if video takes time to load
   },
 });
 
