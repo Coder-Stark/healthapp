@@ -1,58 +1,238 @@
 {
+  "gym": {
+    "categoryName": "GYM EXERCISES",
+    "categoryDescription": "Equipment needed",
+    "categoryImage": "gymCategoryImage",
+    "workouts": [
+      {
+        "id": "chest",
+        "name": "Chest Workout",
+        "description": "Build strength and size in your chest",
+        "image": "chestImage",
+        "duration": "25 mins",
+        "exercises": [
+          { "id": "benchpress", "name": "BENCH PRESS", "video": "benchPressVideo", "sets": 4, "duration": "8-12 reps", "instructions": "Lie on flat bench, press barbell up from chest, lower slowly." },
+          { "id": "inclinedumbbellpress", "name": "INCLINE DUMBBELL PRESS", "video": "inclineDumbbellPressVideo", "sets": 4, "duration": "8-10 reps", "instructions": "Press dumbbells upward at 30-45° incline." },
+          { "id": "chestfly", "name": "CHEST FLY MACHINE", "video": "chestFlyVideo", "sets": 3, "duration": "12-15 reps", "instructions": "Bring arms together in arc on fly machine." },
+          { "id": "pushups", "name": "PUSH-UPS", "video": "pushUpsVideo", "sets": 3, "duration": "15-20 reps", "instructions": "Keep body straight, lower chest to ground, push back up." },
+          { "id": "cablecrossover", "name": "CABLE CROSSOVER", "video": "cableCrossoverVideo", "sets": 3, "duration": "12-15 reps", "instructions": "Pull cables together in front of chest with elbows slightly bent." }
+        ]
+      },
+      {
+        "id": "back",
+        "name": "Back Workout",
+        "description": "Strengthen lats, traps and spinal muscles",
+        "image": "backImage",
+        "duration": "30 mins",
+        "exercises": [
+          { "id": "deadlift", "name": "DEADLIFT", "video": "deadliftVideo", "sets": 4, "duration": "6-8 reps", "instructions": "Lift barbell from ground keeping back straight." },
+          { "id": "pullups", "name": "PULL-UPS", "video": "pullUpsVideo", "sets": 3, "duration": "8-12 reps", "instructions": "Hang from bar, pull body up until chin clears bar." },
+          { "id": "latpulldown", "name": "LAT PULLDOWN", "video": "latPulldownVideo", "sets": 3, "duration": "10-12 reps", "instructions": "Pull bar down to chest while seated." },
+          { "id": "seatedrow", "name": "SEATED CABLE ROW", "video": "seatedRowVideo", "sets": 3, "duration": "10-12 reps", "instructions": "Pull cable handle toward abdomen, squeeze shoulder blades." },
+          { "id": "bentoverrow", "name": "BENT OVER ROW", "video": "bentOverRowVideo", "sets": 4, "duration": "8-10 reps", "instructions": "Row barbell to waist keeping back straight." }
+        ]
+      },
+      {
+        "id": "triceps",
+        "name": "Triceps Workout",
+        "description": "Focus on triceps for bigger arms",
+        "image": "tricepsImage",
+        "duration": "20 mins",
+        "exercises": [
+          { "id": "triceppusdown", "name": "TRICEP PUSHDOWN", "video": "tricepPushdownVideo", "sets": 3, "duration": "12-15 reps", "instructions": "Push cable bar down until arms fully extend." },
+          { "id": "skullcrusher", "name": "SKULL CRUSHERS", "video": "skullCrusherVideo", "sets": 3, "duration": "10-12 reps", "instructions": "Lower barbell toward forehead, extend arms upward." },
+          { "id": "dips", "name": "DIPS", "video": "dipsVideo", "sets": 3, "duration": "8-12 reps", "instructions": "Lower body between parallel bars, push back up." },
+          { "id": "overheadextension", "name": "OVERHEAD DUMBBELL EXTENSION", "video": "overheadExtensionVideo", "sets": 3, "duration": "12-15 reps", "instructions": "Extend dumbbell overhead, lower behind head, press up." },
+          { "id": "closegripbench", "name": "CLOSE-GRIP BENCH PRESS", "video": "closeGripBenchVideo", "sets": 4, "duration": "8-10 reps", "instructions": "Bench press with hands closer together to target triceps." }
+        ]
+      },
+      {
+        "id": "biceps",
+        "name": "Biceps Workout",
+        "description": "Strengthen biceps for arm size",
+        "image": "bicepsImage",
+        "duration": "20 mins",
+        "exercises": [
+          { "id": "barbellcurl", "name": "BARBELL CURL", "video": "barbellCurlVideo", "sets": 4, "duration": "10-12 reps", "instructions": "Curl barbell upward keeping elbows fixed." },
+          { "id": "dumbbellcurl", "name": "DUMBBELL CURLS", "video": "dumbbellCurlVideo", "sets": 3, "duration": "12 reps", "instructions": "Alternate arms curling dumbbells upward." },
+          { "id": "hammercurl", "name": "HAMMER CURLS", "video": "hammerCurlVideo", "sets": 3, "duration": "12-15 reps", "instructions": "Curl dumbbells with palms facing inward." },
+          { "id": "preachercurl", "name": "PREACHER CURLS", "video": "preacherCurlVideo", "sets": 3, "duration": "10-12 reps", "instructions": "Perform curls seated on preacher bench." },
+          { "id": "concentrationcurl", "name": "CONCENTRATION CURLS", "video": "concentrationCurlVideo", "sets": 3, "duration": "12 reps", "instructions": "Sit and curl dumbbell with one arm focusing contraction." }
+        ]
+      },
+      {
+        "id": "shoulder",
+        "name": "Shoulder Workout",
+        "description": "Develop delts and traps",
+        "image": "shoulderImage",
+        "duration": "22 mins",
+        "exercises": [
+          { "id": "overheadpress", "name": "OVERHEAD PRESS", "video": "overheadPressVideo", "sets": 4, "duration": "8-10 reps", "instructions": "Press barbell overhead from shoulders." },
+          { "id": "dumbbelllateralraise", "name": "DUMBBELL LATERAL RAISE", "video": "lateralRaiseVideo", "sets": 3, "duration": "12-15 reps", "instructions": "Raise dumbbells outward to shoulder height." },
+          { "id": "frontraise", "name": "FRONT RAISE", "video": "frontRaiseVideo", "sets": 3, "duration": "12-15 reps", "instructions": "Raise dumbbells straight in front to shoulder level." },
+          { "id": "arnoldpress", "name": "ARNOLD PRESS", "video": "arnoldPressVideo", "sets": 4, "duration": "8-10 reps", "instructions": "Press dumbbells overhead while rotating wrists." },
+          { "id": "shrugs", "name": "DUMBBELL SHRUGS", "video": "shrugsVideo", "sets": 3, "duration": "15-20 reps", "instructions": "Lift shoulders upward holding dumbbells, squeeze traps." }
+        ]
+      },
+      {
+        "id": "legs",
+        "name": "Leg Workout",
+        "description": "Strengthen quads, hamstrings, and calves",
+        "image": "legsImage",
+        "duration": "30 mins",
+        "exercises": [
+          { "id": "squat", "name": "BARBELL SQUAT", "video": "squatVideo", "sets": 4, "duration": "8-12 reps", "instructions": "Squat down with barbell on back, push back up." },
+          { "id": "legpress", "name": "LEG PRESS", "video": "legPressVideo", "sets": 4, "duration": "10-12 reps", "instructions": "Press weight upward with legs on machine." },
+          { "id": "lunges", "name": "LUNGES", "video": "lungesVideo", "sets": 3, "duration": "12 reps", "instructions": "Step forward with one leg, lower until knees bend 90°." },
+          { "id": "legcurl", "name": "LEG CURL MACHINE", "video": "legCurlVideo", "sets": 3, "duration": "12-15 reps", "instructions": "Curl legs backward on machine targeting hamstrings." },
+          { "id": "calfraises", "name": "CALF RAISES", "video": "calfRaisesVideo", "sets": 4, "duration": "15-20 reps", "instructions": "Stand on toes lifting heels upward, squeeze calves." }
+        ]
+      }
+    ]
+  },
   "bodyweight": {
     "categoryName": "BODYWEIGHT EXERCISES",
     "categoryDescription": "No equipment needed",
     "categoryImage": "bodyWeightCategoryImage",
     "workouts": [
       {
-        "id": "fullbody",
-        "name": "Full Body Circuit",
-        "description": "Complete workout for all muscle groups",
-        "image": "fullbody",
+        "id": "fullbodybw",
+        "name": "Bodyweight Blast",
+        "description": "Full body workout without equipment",
+        "image": "bwFullbody",
         "duration": "20 mins",
         "exercises": [
-          {
-            "id": "jumpingjacks",
-            "name": "JUMPING JACKS",
-            "video": "jumpingJacksVideo",
-            "sets": 12,
-            "duration": "30 sec",
-            "instructions": "Stand upright with legs together and arms at your sides. Jump up and spread your feet apart while raising your arms overhead."
-          }
+          { "id": "pushups", "name": "PUSH-UPS", "video": "pushUpsVideo", "sets": 15, "duration": "40 sec", "instructions": "Keep body straight, lower chest to floor, and push back up." },
+          { "id": "mountainclimbers", "name": "MOUNTAIN CLIMBERS", "video": "mountainClimbersVideo", "sets": 20, "duration": "40 sec", "instructions": "Drive knees toward chest alternately in plank position." },
+          { "id": "burpees", "name": "BURPEES", "video": "burpeesVideo", "sets": 12, "duration": "30 sec", "instructions": "Drop into push-up, jump back up explosively." },
+          { "id": "plank", "name": "PLANK", "video": "plankVideo", "sets": 3, "duration": "60 sec", "instructions": "Hold body straight supported by elbows and toes." },
+          { "id": "squats", "name": "BODYWEIGHT SQUATS", "video": "bwSquatsVideo", "sets": 20, "duration": "45 sec", "instructions": "Stand with feet shoulder-width apart, lower hips until thighs parallel." }
         ]
       },
       {
-        "id": "upperbody",
-        "name": "Upper Body Strength",
-        "description": "Focus on arms, chest, and shoulders",
-        "image": "upperbody",
+        "id": "upperbodybw",
+        "name": "Upper Body Focus",
+        "description": "Strengthen chest, arms and shoulders",
+        "image": "bwUpperbody",
         "duration": "15 mins",
         "exercises": [
-          {
-            "id": "inclinepushups",
-            "name": "INCLINE PUSH-UPS",
-            "video":"inclinePushUpsVideo",
-            "sets": 12,
-            "duration": "40 sec",
-            "instructions": "Place hands on elevated surface. Perform push-up motion with body at an incline."
-          }
+          { "id": "diamondpushups", "name": "DIAMOND PUSH-UPS", "video": "diamondPushupsVideo", "sets": 12, "duration": "40 sec", "instructions": "Keep hands close under chest, form diamond shape, lower and push up." },
+          { "id": "tricepdipsbw", "name": "TRICEP DIPS (CHAIR)", "video": "tricepDipsChairVideo", "sets": 12, "duration": "40 sec", "instructions": "Support body on chair edge, lower down to 90 degrees, push back up." },
+          { "id": "handstandhold", "name": "HANDSTAND HOLD", "video": "handstandHoldVideo", "sets": 5, "duration": "20 sec", "instructions": "Kick up into handstand against wall, hold position." },
+          { "id": "armcircles", "name": "ARM CIRCLES", "video": "armCirclesVideo", "sets": 2, "duration": "60 sec", "instructions": "Rotate arms in small circles forward and backward." },
+          { "id": "pushupplank", "name": "PUSH-UP TO PLANK", "video": "pushupPlankVideo", "sets": 10, "duration": "30 sec", "instructions": "Do a push-up then shift into forearm plank position." }
         ]
       },
       {
-        "id": "lowerbody",
-        "name": "Lower Body Power",
-        "description": "Strengthen legs and glutes",
-        "image": "lowerbody",
+        "id": "lowerbodybw",
+        "name": "Leg Strength",
+        "description": "Lower body endurance",
+        "image": "bwLowerbody",
         "duration": "18 mins",
         "exercises": [
-          {
-            "id": "lunges",
-            "name": "LUNGES",
-            "video": "lungesVideo",
-            "sets": 12,
-            "duration": "45 sec",
-            "instructions": "Step forward with one leg, lowering hips until both knees are bent at 90 degrees."
-          }
+          { "id": "lungesbw", "name": "LUNGES", "video": "bwLungesVideo", "sets": 12, "duration": "40 sec", "instructions": "Step forward with one leg, bend knees at 90 degrees." },
+          { "id": "glutebridges", "name": "GLUTE BRIDGES", "video": "gluteBridgesVideo", "sets": 15, "duration": "45 sec", "instructions": "Lie on back, push hips up while squeezing glutes." },
+          { "id": "wallsit", "name": "WALL SIT", "video": "wallSitVideo", "sets": 3, "duration": "60 sec", "instructions": "Slide down wall until thighs parallel, hold position." },
+          { "id": "singlelegdeadlift", "name": "SINGLE LEG DEADLIFT", "video": "singleLegDeadliftVideo", "sets": 12, "duration": "40 sec", "instructions": "Stand on one leg, hinge forward keeping back straight." },
+          { "id": "jumpingsquats", "name": "JUMPING SQUATS", "video": "jumpingSquatsVideo", "sets": 12, "duration": "30 sec", "instructions": "Lower into squat and explode upward into a jump." }
+        ]
+      }
+    ]
+  },
+  "yoga": {
+    "categoryName": "YOGA ROUTINES",
+    "categoryDescription": "Flexibility, breathing, and mindfulness",
+    "categoryImage": "yogaCategoryImage",
+    "workouts": [
+      {
+        "id": "morningflow",
+        "name": "Morning Flow",
+        "description": "Gentle start to the day",
+        "image": "yogaMorning",
+        "duration": "25 mins",
+        "exercises": [
+          { "id": "mountainpose", "name": "MOUNTAIN POSE", "video": "mountainPoseVideo", "sets": 1, "duration": "2 min", "instructions": "Stand tall with feet together, arms by side, breathing deeply." },
+          { "id": "forwardfold", "name": "FORWARD FOLD", "video": "forwardFoldVideo", "sets": 1, "duration": "2 min", "instructions": "Bend forward at hips, let head hang toward floor." },
+          { "id": "downwarddog", "name": "DOWNWARD DOG", "video": "downwardDogVideo", "sets": 1, "duration": "2 min", "instructions": "Form inverted V-shape with hands and feet on floor, hips raised." },
+          { "id": "catcow", "name": "CAT-COW", "video": "catCowVideo", "sets": 5, "duration": "1 min", "instructions": "Alternate arching and rounding back while on all fours." },
+          { "id": "childpose", "name": "CHILD'S POSE", "video": "childPoseVideo", "sets": 1, "duration": "2 min", "instructions": "Kneel and fold torso forward with arms stretched out." }
+        ]
+      },
+      {
+        "id": "powerflow",
+        "name": "Power Flow",
+        "description": "Strength and balance",
+        "image": "yogaPower",
+        "duration": "30 mins",
+        "exercises": [
+          { "id": "warrior1", "name": "WARRIOR I", "video": "warrior1Video", "sets": 1, "duration": "2 min", "instructions": "Step forward, bend front knee, arms raised overhead." },
+          { "id": "warrior2", "name": "WARRIOR II", "video": "warrior2Video", "sets": 1, "duration": "2 min", "instructions": "Extend arms parallel, bend front knee at 90 degrees." },
+          { "id": "triangle", "name": "TRIANGLE POSE", "video": "trianglePoseVideo", "sets": 1, "duration": "2 min", "instructions": "Extend one arm to floor, other arm up, form a triangle shape." },
+          { "id": "plankpose", "name": "PLANK POSE", "video": "plankPoseVideo", "sets": 1, "duration": "1 min", "instructions": "Hold body in straight line supported by arms and toes." },
+          { "id": "crowpose", "name": "CROW POSE", "video": "crowPoseVideo", "sets": 1, "duration": "1 min", "instructions": "Balance body on hands with knees resting on upper arms." }
+        ]
+      },
+      {
+        "id": "relaxation",
+        "name": "Relaxation",
+        "description": "Stress relief and mindfulness",
+        "image": "yogaRelax",
+        "duration": "20 mins",
+        "exercises": [
+          { "id": "corpsepose", "name": "CORPSE POSE", "video": "corpsePoseVideo", "sets": 1, "duration": "5 min", "instructions": "Lie flat on back with arms at sides, eyes closed, deep breathing." },
+          { "id": "seatedtwist", "name": "SEATED TWIST", "video": "seatedTwistVideo", "sets": 1, "duration": "2 min", "instructions": "Sit with legs extended, twist torso with one arm behind you." },
+          { "id": "butterflypose", "name": "BUTTERFLY POSE", "video": "butterflyPoseVideo", "sets": 1, "duration": "3 min", "instructions": "Sit with feet together, knees bent outward, hold feet with hands." },
+          { "id": "happybaby", "name": "HAPPY BABY", "video": "happyBabyVideo", "sets": 1, "duration": "3 min", "instructions": "Lie on back, grab feet, pull knees toward chest." },
+          { "id": "legsonthewall", "name": "LEGS ON THE WALL", "video": "legsOnWallVideo", "sets": 1, "duration": "5 min", "instructions": "Lie on back with legs resting vertically on wall." }
+        ]
+      }
+    ]
+  },
+  "cardio": {
+    "categoryName": "CARDIO WORKOUTS",
+    "categoryDescription": "Boost heart rate and burn calories",
+    "categoryImage": "cardioCategoryImage",
+    "workouts": [
+      {
+        "id": "hiit",
+        "name": "HIIT Training",
+        "description": "High-intensity interval training",
+        "image": "cardioHIIT",
+        "duration": "20 mins",
+        "exercises": [
+          { "id": "jumpingsquats", "name": "JUMPING SQUATS", "video": "jumpingSquatsVideo", "sets": 12, "duration": "30 sec", "instructions": "Explosively jump from squat position." },
+          { "id": "burpees", "name": "BURPEES", "video": "burpeesVideo", "sets": 12, "duration": "30 sec", "instructions": "Drop into push-up, jump back up explosively." },
+          { "id": "highknees", "name": "HIGH KNEES", "video": "highKneesVideo", "sets": 20, "duration": "40 sec", "instructions": "Run in place bringing knees up to chest." },
+          { "id": "plankjacks", "name": "PLANK JACKS", "video": "plankJacksVideo", "sets": 15, "duration": "30 sec", "instructions": "Jump legs in and out while holding plank position." },
+          { "id": "mountainclimbers", "name": "MOUNTAIN CLIMBERS", "video": "mountainClimbersVideo", "sets": 20, "duration": "40 sec", "instructions": "Drive knees toward chest alternately in plank position." }
+        ]
+      },
+      {
+        "id": "endurance",
+        "name": "Endurance Run",
+        "description": "Steady-state cardio session",
+        "image": "cardioEndurance",
+        "duration": "30 mins",
+        "exercises": [
+          { "id": "treadmilljog", "name": "TREADMILL JOG", "video": "treadmillJogVideo", "sets": 1, "duration": "10 min", "instructions": "Jog at steady pace on treadmill." },
+          { "id": "stationarybike", "name": "STATIONARY BIKE", "video": "stationaryBikeVideo", "sets": 1, "duration": "10 min", "instructions": "Cycle at moderate pace on stationary bike." },
+          { "id": "elliptical", "name": "ELLIPTICAL TRAINER", "video": "ellipticalVideo", "sets": 1, "duration": "10 min", "instructions": "Maintain steady pace on elliptical machine." },
+          { "id": "rowing", "name": "ROWING MACHINE", "video": "rowingVideo", "sets": 1, "duration": "10 min", "instructions": "Perform rowing motion keeping back straight." },
+          { "id": "stepmill", "name": "STEPMILL CLIMBER", "video": "stepMillVideo", "sets": 1, "duration": "10 min", "instructions": "Climb steadily on stepmill machine." }
+        ]
+      },
+      {
+        "id": "cardioburn",
+        "name": "Cardio Burnout",
+        "description": "Fast-paced calorie burner",
+        "image": "cardioBurn",
+        "duration": "15 mins",
+        "exercises": [
+          { "id": "jumpingrope", "name": "JUMP ROPE", "video": "jumpRopeVideo", "sets": 1, "duration": "5 min", "instructions": "Jump rope at steady pace." },
+          { "id": "sprint", "name": "SPRINTS", "video": "sprintVideo", "sets": 6, "duration": "20 sec", "instructions": "Sprint at max effort then rest briefly." },
+          { "id": "buttkickers", "name": "BUTT KICKERS", "video": "buttKickersVideo", "sets": 20, "duration": "40 sec", "instructions": "Run in place kicking heels up to glutes." },
+          { "id": "shadowboxing", "name": "SHADOW BOXING", "video": "shadowBoxingVideo", "sets": 3, "duration": "2 min", "instructions": "Throw punches in air, moving around lightly." },
+          { "id": "skaters", "name": "SKATERS", "video": "skatersVideo", "sets": 15, "duration": "30 sec", "instructions": "Jump side to side like a speed skater." }
         ]
       }
     ]

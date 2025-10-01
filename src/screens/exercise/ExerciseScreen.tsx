@@ -13,18 +13,38 @@ export default function ExerciseScreen(){
 
   const categories = [
     {
+      id: 'gym',
+      name: exerciseData.gym.categoryName,
+      description: exerciseData.gym.categoryDescription,
+      image: exerciseData.gym.categoryImage,
+      screen: 'Gym' as keyof ExerciseStackParamList,
+    },
+    {
       id: 'bodyweight',
       name: exerciseData.bodyweight.categoryName,
       description: exerciseData.bodyweight.categoryDescription,
       image: exerciseData.bodyweight.categoryImage,
       screen: 'BodyWeight' as keyof ExerciseStackParamList,
     },
-    //add more cateories
+    {
+      id: 'yoga',
+      name: exerciseData.yoga.categoryName,
+      description: exerciseData.yoga.categoryDescription,
+      image: exerciseData.yoga.categoryImage,
+      screen: 'Yoga' as keyof ExerciseStackParamList,
+    },
+    {
+      id: 'cardio',
+      name: exerciseData.cardio.categoryName,
+      description: exerciseData.cardio.categoryDescription,
+      image: exerciseData.cardio.categoryImage,
+      screen: 'Cardio' as keyof ExerciseStackParamList,
+    },
   ];
 
   const renderCategory = ({item}: any) => (
     <TouchableOpacity style={styles.card}
-      onPress={() => navigation.navigate(item.screen)}
+      onPress={() => navigation.navigate('WorkoutList', {workoutList: item.id})}
     >
     <Image source={exerciseMediaMapping[item.image]} style={styles.categoryImage} />
 

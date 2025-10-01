@@ -3,23 +3,13 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 //screens (for typescript only)
 import ExerciseScreen from "../screens/exercise/ExerciseScreen";
-
-import BodyWeightScreen from "../screens/exercise/categories/bodyWeightCategory/BodyWeightScreen";
-import CardioScreen from "../screens/exercise/categories/cardioCategory/CardioScreen";
-import GymScreen from "../screens/exercise/categories/gymCategory/GymScreen";
-import YogaScreen from "../screens/exercise/categories/yogaCategory/YogaScreen";
-
 import WorkoutDetailsScreen from '../screens/exercise/workouts/WorkoutDetailsScreen';
 import ExerciseDetailsScreen from '../screens/exercise/exerciseDetails/ExerciseDetailsScreen';
+import WorkoutListsScreen from '../screens/exercise/workoutLists/WorkoutListsScreen';
 
 export type ExerciseStackParamList = {
     ExerciseMain: undefined;
-
-    BodyWeight: undefined;
-    Cardio: undefined;
-    Gym: undefined;
-    Yoga: undefined;
-
+    WorkoutList: {workoutList: any};
     WorkoutDetails: {workout: any};
     ExerciseDetails: {exercise: any};
 }
@@ -30,14 +20,9 @@ const ExerciseNativeStackNavigator = () => {
   return (
     <Stack.Navigator initialRouteName='ExerciseMain'>
         <Stack.Screen name="ExerciseMain" component={ExerciseScreen} options={{title: 'Exercises'}}/>
-
-        <Stack.Screen name="BodyWeight" component={BodyWeightScreen}/>
-        <Stack.Screen name="Cardio" component={CardioScreen}/>
-        <Stack.Screen name="Gym" component={GymScreen}/>
-        <Stack.Screen name="Yoga" component={YogaScreen}/>
-
-        <Stack.Screen name="WorkoutDetails" component={WorkoutDetailsScreen}/>
-        <Stack.Screen name="ExerciseDetails" component={ExerciseDetailsScreen}/>
+        <Stack.Screen name="WorkoutList" component={WorkoutListsScreen} options={{title: 'Workout Lists'}} />
+        <Stack.Screen name="WorkoutDetails" component={WorkoutDetailsScreen} options={{title: 'Workout Details'}}/>
+        <Stack.Screen name="ExerciseDetails" component={ExerciseDetailsScreen} options={{title: 'Exercise Details'}}/>
     </Stack.Navigator>
 
   )
