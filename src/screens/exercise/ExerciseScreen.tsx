@@ -1,34 +1,48 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View , Image, FlatList} from 'react-native'
 import React from 'react'
 import { NativeStackNavigationProp, } from '@react-navigation/native-stack'
 import { useNavigation } from '@react-navigation/native';
 import { ExerciseStackParamList } from '../../navigation/ExerciseNativeStackNavigator';
+import exerciseData from '../../data/exerciseData.json';
+import { exerciseMediaMapping } from '../../assets/exerciseMedia/exerciseMediaMapping';
 
 type ExerciseNavProp = NativeStackNavigationProp<ExerciseStackParamList>;
 
 export default function ExerciseScreen(){
   const navigation = useNavigation<ExerciseNavProp>();
+
+  const categories = [
+    {
+      id: 'bodyweight',
+      name: exerciseData.bodyweight.categoryName,
+      description: exerciseData.bodyweight.categoryDescription,
+      image: exerciseData.bodyweight.categoryImage,
+      screen: 'BodyWeight' as keyof ExerciseStackParamList,
+    },
+    //add more cateories
+  ];
+
+  const renderCategory = ({item}: any) => (
+    <TouchableOpacity style={styles.card}
+      onPress={() => navigation.navigate(item.screen)}
+    >
+    <Image source={exerciseMediaMapping[item.image]} style={styles.categoryImage} />
+
+    <View style={styles.cardContent}>
+      <Text style={styles.cardTitle}>{item.name}</Text>
+      <Text style={styles.cardDescription}>{item.description}</Text>
+    </View>
+    </TouchableOpacity>
+  )
   return(
     <View style={styles.container}>
-      {/* BodyWeight Card */}
-      <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('BodyWeight')}>
-        <Text style={styles.cardText}>Body Weight</Text>
-      </TouchableOpacity>
-
-      {/* Cardio Card */}
-      <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('Cardio')}>
-        <Text style={styles.cardText}>Cardio</Text>
-      </TouchableOpacity>
-
-      {/* Gym Card */}
-      <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('Gym')}>
-        <Text style={styles.cardText}>Gym</Text>
-      </TouchableOpacity>
-
-      {/* Yoga Card */}
-      <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('Yoga')}>
-        <Text style={styles.cardText}>Yoga</Text>
-      </TouchableOpacity>
+      <Text style={styles.header}>Choose Your Workout</Text>
+      <FlatList 
+        data={categories}
+        renderItem={renderCategory}
+        keyExtractor={(item) => item.id}
+        showsVerticalScrollIndicator={false}
+      />
     </View>
   )
 }
@@ -36,18 +50,42 @@ export default function ExerciseScreen(){
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    backgroundColor: '#f5f5f5',
     padding: 16,
   },
+  header: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 20,
+    textAlign: 'center',
+    marginTop: 10,
+  },
   card: {
-    backgroundColor: 'gray',
-    padding: 20,
+    backgroundColor: 'white',
     borderRadius: 12,
     marginBottom: 16,
-    alignItems: 'center',
+    overflow: 'hidden',
+    elevation: 3,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
   },
-  cardText: {
-    fontSize: 18,
+  categoryImage: {
+    width: '100%',
+    height: 150,
+  },
+  cardContent: {
+    padding: 20,
+  },
+  cardTitle: {
+    fontSize: 20,
     fontWeight: 'bold',
+    marginBottom: 8,
+    color: '#333',
   },
-})
+  cardDescription: {
+    fontSize: 14,
+    color: '#666',
+  },
+});
